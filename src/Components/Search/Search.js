@@ -12,6 +12,7 @@ const Search = ({ getSearch, getParameter }) => {
     return (
         <div className='search-container'>
             <form className='search-form'>
+                <span className='search-by-label'>Search By:</span>
                 <select className='form-select' onChange={getParameter}>
                     <option value='name' >Character Name</option>
                     <option value='nickname' >Character NickName</option>

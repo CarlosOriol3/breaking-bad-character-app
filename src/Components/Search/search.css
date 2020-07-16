@@ -1,13 +1,15 @@
 .search-container{
-    width: 100%;
-    
-    
+    width: 100%;  
+}
+.search-by-label{
+    color: white;
+    font-family: Merriweather, sans-serif;
+    font-size: 1.3em;
 }
 .form-select{
     margin: 20px;
     margin: 10px;
     height: 35px;
-    
     font-size: 1.3em;
     border-radius: 5px;
     background-color: white;   
@@ -29,5 +31,8 @@
 @media (max-width: 600px){
     .search-text{
         width: 95%;
+    }
+    .search-by-label{
+        display: block;
     }
 }
