@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './search.css'
 
-const Search = ({getSearch}) => {
+const Search = ({ getSearch, getParameter }) => {
     const [search, setSearch] = useState('')
 
     const changeHandler = (searchValue) => {
@@ -12,13 +12,19 @@ const Search = ({getSearch}) => {
     return (
         <div className='search-container'>
             <form className='search-form'>
-                <input 
-                className='search-text' 
-                type='text' 
-                placeholder='Search Character' 
-                autoFocus
-                value={search}
-                onChange={(event) => changeHandler(event.target.value)} />
+                <select className='form-select' onChange={getParameter}>
+                    <option value='name' >Character Name</option>
+                    <option value='nickname' >Character NickName</option>
+                    <option value='portrayed' >Actor</option>
+                </select>
+                <input
+                    className='search-text'
+                    type='text'
+                    placeholder='Search Character'
+                    autoFocus
+                    value={search}
+                    onChange={(event) => changeHandler(event.target.value)}
+                />
             </form>
         </div>
     )
