@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <header className='header-component'>
-            <img className='header-logo' src={process.env.PUBLIC_URL + '/BBLogo.png'} alt='Breaking Bad'></img>
+            <div><h1 className='title'><div className='green-square'>Br<sup className='sup-number'>35</sup></div>eaking &nbsp;<div className='green-square'>Ba<sup className='sup-number'>56</sup></div>d Characters</h1></div>
         </header>
     )
 }

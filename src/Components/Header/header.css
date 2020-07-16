@@ -1,8 +1,46 @@
 .header-component{
     width: 100%;
+    text-align: center;
 }
 .header-logo{
     display: block;
     padding: auto;
     margin: auto;
+}
+
+.title{
+    color: white;
+    font-family: Merriweather;
+    font-size: 5em;
+}
+
+.green-square{
+    background: rgb(7, 103, 48);
+    padding: 5px 8px;
+    margin: 3px;
+    background: radial-gradient(
+      circle,
+      rgba(7, 103, 48, 1) 0%,
+      rgba(10, 61, 37, 1) 68%
+    );
+    border: 1px solid white;
+    width: fit-content;
+    display: inline-block;
+    position: relative;
+}
+.sup-number{
+    font-size: medium;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-family: sans-serif;
+}
+
+@media (max-width: 600px){
+    .title{
+        font-size: 1.8em;
+    }
+    .sup-number{
+        font-size: x-small;
+    }
 }

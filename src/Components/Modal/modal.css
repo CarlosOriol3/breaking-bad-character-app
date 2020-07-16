@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
-
-
 .modal {
   position: fixed;
   z-index: 100;
@@ -11,12 +8,11 @@
     rgba(10, 61, 37, 1) 68%
   );
   width: 90%;
-  
   border: 1.5px solid white;
   border-radius: 10px;
   box-shadow: 1px 1px 1px black;
   padding: 16px;
-  top: 30%;
+  top: 28%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
   margin: auto;
@@ -30,31 +26,28 @@
   margin: auto;
 }
 
-.modal ul{
-    color: white;
-    font-family: Merriweather, sans-serif;
-    font-size: 1.1em;
-    text-align: center;
-    list-style: none;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    padding:0;
-    
+.modal ul {
+  color: white;
+  font-family: Merriweather, sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 0;
 }
-.modal ul li{
-    margin: 5px;
-    
-    
+.modal ul li {
+  margin: 5px;
 }
 
-.modal hr{
-    width: 80%;
+.modal hr {
+  width: 80%;
 }
-.modal-name{
-    margin: 0;
+.modal-name {
+  margin: 0;
 }
 @media (min-width: 600px) {
   .modal {
@@ -62,8 +55,8 @@
     /* margin-left: 26.5%; */
     flex-direction: row;
   }
-  .modal ul li{
-      margin: 10px;
+  .modal ul li {
+    margin: 10px;
   }
   .modal img {
     margin-left: 0;
