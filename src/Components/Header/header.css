@@ -37,7 +37,7 @@
     font-family: sans-serif;
 }
 
-@media (max-width: 600px){
+@media (max-width: 620px){
     .title{
         font-size: 1.8em;
     }
