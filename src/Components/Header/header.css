@@ -10,8 +10,9 @@
 
 .title{
     color: white;
-    font-family: Merriweather;
+    font-family: Merriweather,sans-serif;
     font-size: 5em;
+    margin:0
 }
 
 .green-square{

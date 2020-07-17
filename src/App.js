@@ -8,6 +8,7 @@ import Header from './Components/Header/Header'
 import CharacterGrid from './Components/Characters/CharacterGrid'
 import Search from './Components/Search/Search'
 import Category from './Components/Category/Category'
+import Footer from './Components/Footer/Footer'
 // import Loading from './Components/Loading/Loading';
 
 function App() {
@@ -35,52 +36,56 @@ function App() {
       .then(setTimeout(() => {
         setIsLoading(false)
       }, 800))
-}, [])
+  }, [])
 
-// useEffect(() => {
+  // useEffect(() => {
 
-//   const fetchCharacters = async () => {
+  //   const fetchCharacters = async () => {
 
-//     const result = await axios(`https://www.breakingbadapi.com/api/characters`)
-//     setCharacters(result.data)
-//   }
+  //     const result = await axios(`https://www.breakingbadapi.com/api/characters`)
+  //     setCharacters(result.data)
+  //   }
 
-//   fetchCharacters()
+  //   fetchCharacters()
 
 
 
-// }, [])
+  // }, [])
 
-useEffect(() => {
-  //console.log(result.data)
-  // setIsLoading(false)
-
-  if (categorySearch === 'Better Call Saul') {
-    const searchResult = characters.filter(((char) => (char.category === categorySearch || char.category === 'Breaking Bad, ' + categorySearch) && char[parameter].toLowerCase().includes(nameSearch.toLowerCase())))
-    setCharacterFilter(searchResult)
-    //setIsLoading(false)
-  } else if (categorySearch === 'Breaking Bad') {
-    const searchResult = characters.filter((char) => ((char.category === categorySearch || char.category === categorySearch + ', Better Call Saul') && char[parameter].toLowerCase().includes(nameSearch.toLowerCase())))
-    setCharacterFilter(searchResult)
+  useEffect(() => {
+    //console.log(result.data)
     // setIsLoading(false)
-  }
-  else {
-    const searchResult = characters.filter((char) => (char[parameter].toLowerCase().includes(nameSearch.toLowerCase())))
-    setCharacterFilter(searchResult)
-    // setIsLoading(false)
-  }
-  //console.log(result.data)
-  // setIsLoading(false)
-}, [nameSearch, categorySearch, parameter, characters])
 
-return (
-  <div className="App">
-    <Header />
-    <Search getSearch={(searchValue) => setNameSearch(searchValue)} getParameter={(e) => setParameter(e.target.value)} />
-    <Category searchCategory={(category) => setCategorySearch(category)} />
-    <CharacterGrid isLoading={isLoading} characters={characterfilter} />
-  </div>
-);
+    if (categorySearch === 'Better Call Saul') {
+      const searchResult = characters.filter(((char) => (char.category === categorySearch || char.category === 'Breaking Bad, ' + categorySearch) && char[parameter].toLowerCase().includes(nameSearch.toLowerCase())))
+      setCharacterFilter(searchResult)
+      //setIsLoading(false)
+    } else if (categorySearch === 'Breaking Bad') {
+      const searchResult = characters.filter((char) => ((char.category === categorySearch || char.category === categorySearch + ', Better Call Saul') && char[parameter].toLowerCase().includes(nameSearch.toLowerCase())))
+      setCharacterFilter(searchResult)
+      // setIsLoading(false)
+    }
+    else {
+      const searchResult = characters.filter((char) => (char[parameter].toLowerCase().includes(nameSearch.toLowerCase())))
+      setCharacterFilter(searchResult)
+      // setIsLoading(false)
+    }
+    //console.log(result.data)
+    // setIsLoading(false)
+  }, [nameSearch, categorySearch, parameter, characters])
+
+  return (
+    <div className="App">
+      <div className='content-wrap'>
+        <Header />
+        <Search getSearch={(searchValue) => setNameSearch(searchValue)} getParameter={(e) => setParameter(e.target.value)} />
+        <Category searchCategory={(category) => setCategorySearch(category)} />
+        <CharacterGrid isLoading={isLoading} characters={characterfilter} />
+        <Footer />
+      </div>
+
+    </div>
+  );
 }
 
 export default App;

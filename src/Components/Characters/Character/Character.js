@@ -12,7 +12,7 @@ const Character = ({ character: { id, name, birthday, occupation, img, status, n
 
     //Filter ocupations
     const ocupations = occupation.map((oc) => `, ${oc}`)
-    ocupations[0] = ocupations[0].replace(',','')
+    ocupations[0] = ocupations[0].replace(',', '')
 
     return (
         <>
@@ -35,6 +35,12 @@ const Character = ({ character: { id, name, birthday, occupation, img, status, n
                 </div>
             </div >
             <Modal show={showInfo} clicked={exitModalHandler}>
+                <div className='modal-exit-button-container'>
+                    <div className='modal-exit-button' onClick={exitModalHandler}>
+                        <span>X</span>
+                    </div>
+                </div>
+
                 <img src={img} alt={name}  ></img>
                 <ul>
                     <li><h1 className='modal-name'>{name}</h1></li>

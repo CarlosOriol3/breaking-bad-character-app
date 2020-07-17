@@ -49,6 +49,19 @@
 .modal-name {
   margin: 0;
 }
+
+.modal-exit-button-container{
+  width: 100%;
+}
+.modal-exit-button{
+  color: white;
+  border: 1px solid white;
+  width: fit-content;
+  height: fit-content;
+  padding: 2px 4px;
+  margin-left: 95%;
+}
+
 @media (min-width: 600px) {
   .modal {
     width: 700px;
@@ -61,5 +74,9 @@
   .modal img {
     margin-left: 0;
     margin-right: 10px;
+  }
+
+  .modal-exit-button-container{
+    display: none;
   }
 }
