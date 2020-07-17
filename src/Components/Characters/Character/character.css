@@ -83,3 +83,9 @@
   cursor: pointer;
   text-decoration: none;
 }
+
+@media (max-width: 600px){
+  .card {
+    transition: none;
+  }
+}
